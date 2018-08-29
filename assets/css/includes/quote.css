@@ -1,0 +1,10 @@
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: url(http://via.placeholder.com/350x150);
+  background-position: center;
+  background-size: cover; }
+  .quote .quote-by {
+    text-align: center; }

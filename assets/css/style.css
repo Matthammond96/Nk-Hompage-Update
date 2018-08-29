@@ -1,0 +1,438 @@
+@font-face {
+  font-family: mainFont;
+  src: url(../fonts/AdobeGaramondProRegular.ttf);
+}
+
+* {
+  margin: 0;
+  font-family: mainFont;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrap {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 70%;
+}
+
+header {
+  height: 165px;
+  padding-top: 35px;
+}
+
+header .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header .top .logo img {
+  height: 25px;
+}
+
+header nav {
+  margin-top: 50px;
+  display: flex;
+  font-size: 1em;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+header nav ul li a {
+  color: #000;
+  border: 1px solid #fff;
+  font-weight: 100;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.h1-fix {
+  font-size: 2em !important;
+}
+
+.main-hero {
+  background-image: url(http://via.placeholder.com/350x150);
+  background-position: center;
+  background-size: cover;
+  height: 105vh;
+  padding-top: 125px;
+}
+
+.main-hero .CTA {
+  color: #fff;
+  width: 525px;
+}
+
+.main-hero .CTA .btn {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 240px;
+  height: 60px;
+}
+
+.main-hero .CTA .btn a {
+  color: #000;
+  text-decoration: none;
+}
+
+.carousel {
+  margin-left: 70px;
+  margin-right: 300px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.carousel .info {
+  position: absolute;
+  right: -6%;
+  top: 10%;
+  background: white;
+  padding: 20px;
+  height: 1021px;
+  width: 300px;
+  display: flex;
+}
+
+.carousel .info .btns {
+  display: flex;
+}
+
+.carousel .info .btns .btn {
+  width: 5px;
+  height: 5px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: #bbbbbb;
+}
+.pages {
+  display: none;
+}
+.carousel .info .btns .active {
+  background-color: black;
+}
+
+.carousel .current-img {
+  margin-right: 50px;
+  width: 100%;
+}
+
+.carousel .current-img img {
+  width: 100%;
+}
+
+.nk-button {
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  letter-spacing: 1.5px;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: url(http://via.placeholder.com/350x150);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.quote .quote-by {
+  text-align: center;
+  font-size: 0.6em;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.quote .quote-words {
+  font-size: 2em;
+}
+
+.new-arrivals {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.new-arrivals .item-list {
+  margin-top: 70px;
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+}
+
+.new-arrivals .item-list .item {
+  padding: 40px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+
+.new-arrivals .item-list .item img {
+  margin-bottom: 90px;
+  width: 95%;
+}
+
+.new-arrivals .item-list .item p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.new-arrivals .item-list .item:hover {
+  border: 1px solid #c7c7c7;
+}
+
+.CTA-section {
+  background-image: url(http://via.placeholder.com/350x150);
+  background-position: center;
+  background-size: cover;
+  height: 105vh;
+  padding: 50px;
+  position: relative;
+}
+
+.CTA-section .CTA {
+  color: #fff;
+  width: 100%;
+}
+
+.CTA-section .CTA .btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 240px;
+  height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.75em;
+  font-family: "mainFont";
+}
+
+.CTA-section .CTA .btn a {
+  color: #000;
+  text-decoration: none;
+}
+
+.CTA-section .line-flex {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+}
+
+.CTA-section .line-flex .line {
+  height: 100%;
+  width: 1px;
+  background-color: #fff;
+}
+
+.stories {
+  height: auto;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+
+.stories .CTA .btn {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  width: 240px;
+  height: 60px;
+}
+
+.stories .CTA .btn a {
+  color: #fff;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+
+.stories .story-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.stories .story-grid p {
+  font-size: 1.2em;
+}
+
+.stories .story-grid small {
+  color: #bbbbbb;
+  font-size: 0.7em;
+}
+
+.stories .story-grid .col {
+  background-color: red;
+  height: 100px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.stories .story-grid .col-1 {
+  width: 100%;
+}
+
+.stories .story-grid .col-2 {
+  width: 50%;
+  position: relative;
+}
+
+.stories .story-block-tall img {
+  width: 100%;
+}
+
+#story-bottom-float {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.stories .story-block {
+  margin: 20px 0;
+}
+
+.stories .story-block-tall img {
+  height: auto;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.stories .story-block-short img {
+  height: auto;
+  width: 75%;
+  margin-bottom: 20px;
+}
+
+.story-block-wide {
+  width: 430px;
+}
+
+.story-block-wide img {
+  width: 60%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.form .CTA .btn {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  width: 240px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form .CTA .btn a {
+  color: #fff;
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+
+.form form {
+  display: flex;
+  flex-flow: column;
+  background: #f0f0f0;
+  padding: 94px;
+  text-align: center;
+  justify-content: center;
+}
+
+.form form h2 {
+  margin-bottom: 25px;
+}
+
+.form form p {
+  margin-bottom: 25px;
+}
+
+.form form input {
+  height: 45px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+}
+
+.form form .CTA {
+  margin-left: 0px;
+}
+
+.CTA-section .wrap {
+  display: inline-block;
+  width: 49%;
+}
+
+.bottom-book {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: calc(49% - 50px) !important;
+  text-align: right;
+}
+
+.bottom-book .CTA {
+  float: right;
+}
+
+.bottom-book .CTA .btn {
+  margin-left: auto;
+}
+#middle-parting {
+  background-color: #fff;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+.mobile-hide {
+  display: block;
+}
+.desktop-hide {
+  display: none;
+}

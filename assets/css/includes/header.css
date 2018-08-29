@@ -1,0 +1,17 @@
+header {
+  height: 165px;
+  padding-top: 35px; }
+  header .top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+  header nav {
+    margin-top: 50px;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center; }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      width: 60%; }

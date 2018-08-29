@@ -1,0 +1,23 @@
+.new-arrivals {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px; }
+  .new-arrivals .item-list {
+    margin-top: 70px;
+    display: flex;
+    height: 555px;
+    justify-content: space-around; }
+    .new-arrivals .item-list .item {
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #fff;
+      text-decoration: none; }
+      .new-arrivals .item-list .item img {
+        margin-bottom: 90px; }
+      .new-arrivals .item-list .item p {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+        text-decoration: none;
+        color: #000; }
+      .new-arrivals .item-list .item:hover {
+        border: 1px solid #c7c7c7; }
