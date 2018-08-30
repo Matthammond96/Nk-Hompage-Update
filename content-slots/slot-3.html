@@ -1,23 +1,146 @@
 <section class="carousel">
 
-  <div class="current-img">
-    <img src="http://via.placeholder.com/350x325" alt="">
-  </div>
-  <div class="next-img">
-    <img src="http://via.placeholder.com/350x325" alt="">
-  </div>
+<div id="instagram-feed-container" style="margin-bottom: 0px; margin-top: 50px;" draggable="false">
+  <!-- <svg class="instagram-feed-arrows" id="instagram-feed-arrow-left"></svg>
+  <svg class="instagram-feed-arrows" id="instagram-feed-arrow-right"></svg> -->
+  <div id="instagram-feed-holder">
 
-<div class="info">
-  <h1 class="h1-fix">lorem ipsum</h1>
-  <a class="nk-button" href="#">Shop Now</a>
-  <div class="btns">
-    <div class="btn active"><a href="#"></a></div>
-    <div class="btn"><a href="#"></a></div>
-    <div class="btn"><a href="#"></a></div>
+    <div class="insta-feed-image-wrapper center carousel-item-1">
+      <img src="https://www.queenstown.com/images/sobipro/blog/3852/img_a-winter-wonderland-landscape-photographers-queenstown-tour-1.jpg">
     </div>
-</div>
 
+    <div class="insta-feed-image-wrapper insta-feed-prev carousel-item-2">
+      <img src="https://www.queenstown.com/images/sobipro/blog/3852/img_a-winter-wonderland-landscape-photographers-queenstown-tour-1.jpg">
+    </div>
 
+    <div class="insta-feed-image-wrapper center carousel-item-3">
+      <img src="https://www.queenstown.com/images/sobipro/blog/3852/img_a-winter-wonderland-landscape-photographers-queenstown-tour-1.jpg">
+    </div>
+
+    <div id="insta-feed-hidden-height-fix">
+      <img src="https://www.queenstown.com/images/sobipro/blog/3852/img_a-winter-wonderland-landscape-photographers-queenstown-tour-1.jpg">
+      <div class="insta-feed-layover">
+        <div class="insta-feed-layover-valign">
+          <p style="text-decoration: underline; font-size: 17px; text-transform: uppercase; line-height: 1.5;">Discover the look</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="info">
+      <div class="info-positioning info-slide-1">
+        <h1 class="h1-fix">lorem ipsum</h1>
+        <a class="nk-button" href="#">Shop Now</a>
+      </div>
+
+      <div class="info-positioning info-slide-2">
+        <h1 class="h1-fix">lorem ipsum</h1>
+        <a class="nk-button" href="#">Shop Now</a>
+      </div>
+
+      <div class="info-positioning info-slide-3">
+        <h1 class="h1-fix">lorem ipsum</h1>
+        <a class="nk-button" href="#">Shop Now</a>
+      </div>
+
+      <div class="btns">
+        <div data-scrollNum="1" class="btn sliderControl active"><a href="#"></a></div>
+        <div data-scrollNum="2" class="btn sliderControl"><a href="#"></a></div>
+        <div data-scrollNum="3" class="btn sliderControl"><a href="#"></a></div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 </section>
+
+<script>
+  jQuery(document).ready(function() {
+
+    let up = 91;
+
+    var stage1 = 0;
+    var stage2 = 91;
+    var stage3 = 182;
+
+    $(".sliderControl").click(function(event) {
+
+      $(".sliderControl").removeClass('active');
+      $(this).addClass('active');
+
+      let windowWidth = $(window).width();
+
+      let clickNumber = jQuery(this).attr("data-scrollNum");
+
+      console.log(clickNumber);
+
+      switch (clickNumber) {
+        case "1":
+
+          stage1 = 0 + "%";
+          $(".carousel-item-1").css("left", stage1);
+          $(".info-slide-1").css("left", "5%");
+          if (windowWidth < 850) {
+            stage2 = 100 + "%";
+          } else  {
+            stage2 = 91 + "%";
+          }
+
+          $(".carousel-item-2").css("left", stage2);
+          $(".info-slide-2").css("left", "105%");
+          if (windowWidth < 850) {
+            stage3 = 200 + "%";
+          } else  {
+            stage3 = 182 + "%";
+          }
+          $(".carousel-item-3").css("left", stage3);
+          $(".info-slide-3").css("left", "205%");
+        return ;
+        case "2":
+        if (windowWidth < 850) {
+          stage1 = -100 + "%";
+        } else  {
+          stage1 = -91 + "%";
+        }
+          $(".carousel-item-1").css("left", stage1);
+          $(".info-slide-1").css("left", "-105%");
+          stage2 = 0 + "%";
+          $(".carousel-item-2").css("left", stage2);
+          $(".info-slide-2").css("left", "5%");
+          if (windowWidth < 850) {
+            stage3 = 100 + "%";
+          } else  {
+            stage3 = 91 + "%";
+          }
+          $(".carousel-item-3").css("left", stage3);
+          $(".info-slide-3").css("left", "105%");
+        return ;
+        case "3":
+        if (windowWidth < 850) {
+          stage1 = -200 + "%";
+        } else  {
+          stage1 = -182 + "%";
+        }
+          $(".carousel-item-1").css("left", stage1);
+          $(".info-slide-1").css("left", "-205%");
+          if (windowWidth < 850) {
+            stage2 = -100 + "%";
+          } else  {
+            stage2 = -91 + "%";
+          }
+          $(".carousel-item-2").css("left", stage2);
+          $(".info-slide-2").css("left", "-105%");
+          stage3 = 0 + "%";
+          $(".carousel-item-3").css("left", stage3);
+          $(".info-slide-3").css("left", "5%");
+        return ;
+        default:
+          return;
+      }
+      stage1 = 0;
+      stage2 = 91;
+      stage3 = 182;
+    });
+  });
+</script>

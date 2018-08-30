@@ -2,10 +2,9 @@
   .main-hero .CTA {
     width: 100%;
   }
-
   .carousel {
     background-color: #fff;
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
   .carousel .info {
@@ -17,6 +16,10 @@
     height: auto;
     display: block;
     text-align: center;
+    height: 125px;
+  }
+  .carousel .info .nk-button {
+    margin-bottom: 15px
   }
   .carousel .info h1 {
     margin-bottom: 15px;
@@ -24,7 +27,10 @@
   .carousel .info .btns {
       text-align: center;
       display: block;
-      margin-top: 18px;
+      margin-top: 0px;
+      bottom: 20px;
+      width: 100%;
+      left: 0;
   }
   .carousel .info .btns .btn {
     display: inline-block;
@@ -160,5 +166,30 @@
   }
   .form form {
     padding: 95px 25px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .info-positioning {
+    transition: all 0.5s;
+  }
+  #insta-feed-hidden-height-fix {
+    width: 100%;
+  }
+  .insta-feed-image-wrapper {
+    width: 100%;
+    top: 0;
+    transition: all 0.5s;
+    margin: 0;
+  }
+  .insta-feed-image-wrapper:nth-child(1) {
+    left: 0%;
+  }
+
+  .insta-feed-image-wrapper:nth-child(2) {
+    left: 100%;
+  }
+
+  .insta-feed-image-wrapper:nth-child(3) {
+    left: 200%;
   }
 }

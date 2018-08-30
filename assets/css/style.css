@@ -92,28 +92,31 @@ header nav ul li a:hover {
 }
 
 .carousel {
-  margin-left: 70px;
-  margin-right: 300px;
   margin-top: 20px;
   position: relative;
 }
 
 .carousel .info {
   position: absolute;
-  right: -6%;
+  right: 7%;
   top: 10%;
   background: white;
   padding: 20px;
-  height: 1021px;
-  width: 300px;
-  display: flex;
+  height: 80%;
+  width: 30%;;
+  display: block;
 }
-
+.carousel .info .nk-button {
+  margin-bottom: 15px
+}
 .carousel .info .btns {
-  display: flex;
+  display: block;
+  position: absolute;
+  bottom: 40px;
 }
 
 .carousel .info .btns .btn {
+  display: inline-block;
   width: 5px;
   height: 5px;
   margin-right: 20px;
@@ -435,4 +438,96 @@ header nav ul li a:hover {
 }
 .desktop-hide {
   display: none;
+}
+
+#insta-feed-hidden-height-fix {
+  width: 75%;
+display: inline-block;
+vertical-align: middle;
+position: relative;
+margin: 0 2%;
+transition: all 1s;
+opacity: 0; visibility:hidden;
+}
+
+#instagram-feed-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#insta-feed-image-wrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.insta-feed-image-wrapper {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 75%;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  margin: 0 2%;
+  transition: all 1s;
+  top: 0px;
+}
+
+#instagram-feed-holder {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  width: 100%;
+  position: relative;
+}
+
+.insta-feed-image-wrapper img {
+  width: 100%;
+}
+/*
+.insta-feed-image-wrapper {
+  top: 50px;
+} */
+
+.insta-feed-image-wrapper:nth-child(1) {
+  left: 0%;
+}
+
+.insta-feed-image-wrapper:nth-child(2) {
+  left: 91%;
+}
+
+.insta-feed-image-wrapper:nth-child(3) {
+  left: 150%;
+}
+
+
+.carousel .info {
+  z-index: 1;
+}
+
+.info-positioning {
+  position: absolute;
+  top: 5%;
+  width: 90%;
+  transition: all 1s;
+}
+
+.info-positioning:nth-child(1) {
+  left: 5%;
+}
+.info-positioning:nth-child(2) {
+  left: 105%;
+}
+.info-positioning:nth-child(3) {
+  left: 205%;
 }
