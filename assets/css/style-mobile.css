@@ -112,6 +112,41 @@
     display: none;
   }
 }
+
+@media only screen and (max-width: 850px) {
+  .new-arrivals .info {
+    display: block;
+  }
+  .info-positioning {
+    transition: all 0.5s;
+  }
+  #insta-feed-hidden-height-fix {
+    width: 100%;
+  }
+  .insta-feed-image-wrapper {
+    width: 100%;
+    top: 0;
+    transition: all 0.5s;
+    margin: 0;
+  }
+  .insta-feed-image-wrapper:nth-child(1) {
+    left: 0%;
+  }
+
+  .insta-feed-image-wrapper:nth-child(2) {
+    left: 100%;
+  }
+
+  .insta-feed-image-wrapper:nth-child(3) {
+    left: 200%;
+  }
+
+  .new-arrivals .wrap {
+    max-width: 10000px;
+    width: 133.33%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   body {
     background-color: #000;
@@ -167,29 +202,12 @@
   .form form {
     padding: 95px 25px;
   }
-}
-@media only screen and (max-width: 850px) {
-  .info-positioning {
-    transition: all 0.5s;
-  }
-  #insta-feed-hidden-height-fix {
-    width: 100%;
-  }
-  .insta-feed-image-wrapper {
-    width: 100%;
-    top: 0;
-    transition: all 0.5s;
-    margin: 0;
-  }
-  .insta-feed-image-wrapper:nth-child(1) {
-    left: 0%;
+  .new-arrivals .wrap {
+    max-width: 10000px;
+    width: 200%;
   }
 
-  .insta-feed-image-wrapper:nth-child(2) {
-    left: 100%;
-  }
-
-  .insta-feed-image-wrapper:nth-child(3) {
-    left: 200%;
+  .new-arrivals .item-list .item {
+    padding: 20px;
   }
 }

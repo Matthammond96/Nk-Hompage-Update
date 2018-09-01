@@ -109,13 +109,24 @@ header nav ul li a:hover {
 .carousel .info .nk-button {
   margin-bottom: 15px
 }
-.carousel .info .btns {
+.new-arrivals .info .btns, .carousel .info .btns {
   display: block;
   position: absolute;
   bottom: 40px;
 }
 
-.carousel .info .btns .btn {
+.new-arrivals .info {
+  display: none;
+  transition: all 1s;
+}
+
+.new-arrivals .info .btns {
+  position: relative;
+  bottom: 0;
+  top: 0;
+}
+
+.new-arrivals .info .btns .btn, .carousel .info .btns .btn {
   display: inline-block;
   width: 5px;
   height: 5px;
@@ -123,10 +134,14 @@ header nav ul li a:hover {
   border-radius: 50%;
   background-color: #bbbbbb;
 }
+.new-arrivals .info .btns .btn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .pages {
   display: none;
 }
-.carousel .info .btns .active {
+.carousel .info .btns .active, .new-arrivals .info .btns .active {
   background-color: black;
 }
 
@@ -172,15 +187,18 @@ header nav ul li a:hover {
 
 .new-arrivals {
   text-align: center;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 40px;
+  background-color: #fff;
+  padding-top: 30px;
+  padding-bottom: 70px;
 }
 
 .new-arrivals .item-list {
-  margin-top: 70px;
+  margin-top: 20px;
   display: flex;
   height: auto;
   justify-content: space-around;
+  overflow: hidden;
 }
 
 .new-arrivals .item-list .item {
@@ -191,16 +209,36 @@ header nav ul li a:hover {
 }
 
 .new-arrivals .item-list .item img {
-  margin-bottom: 90px;
+  margin-bottom: 30px;
   width: 95%;
 }
-
 .new-arrivals .item-list .item p {
-  font-size: 1.3em;
-  margin-bottom: 20px;
+  font-size: 1em;
+  margin-bottom: 10px;
   text-decoration: none;
   color: #000;
 }
+
+.new-arrivals .item-list .item .price {
+  margin-bottom: 20px;
+}
+
+.new-arrivals .item-list .item .promo {
+  color: #bbb;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.new-arrivals .wrap {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.new-arrivals .item-list .item .style {
+  text-transform: uppercase;
+}
+
+
 
 .new-arrivals .item-list .item:hover {
   border: 1px solid #c7c7c7;
