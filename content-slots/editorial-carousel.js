@@ -1,6 +1,8 @@
   jQuery(document).ready(function() {
 
+
     let up = 91;
+    var count = 1;
 
     var stage1 = 0;
     var stage2 = 91;
@@ -14,6 +16,7 @@
       let windowWidth = $(window).width();
 
       let clickNumber = jQuery(this).attr("data-scrollNum");
+      count = clickNumber;
 
       console.log(clickNumber);
 
@@ -84,4 +87,13 @@
       stage2 = 91;
       stage3 = 182;
     });
+
+    function heroTimer() {
+      count ++;
+
+      $(".sliderControl:nth-child(" + count + ")").trigger('click');
+      console.log(count);
+      timer = setTimeout(heroTimer, 5000);
+    }
+    heroTimer();
   });
