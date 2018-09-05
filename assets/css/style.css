@@ -82,8 +82,8 @@ header nav ul li a:hover {
   justify-content: center;
   align-items: center;
   background: #fff;
-  width: 240px;
-  height: 60px;
+  width: 208px;
+  height: 50px;
 }
 
 .main-hero .CTA .btn a {
@@ -154,14 +154,6 @@ header nav ul li a:hover {
   width: 100%;
 }
 
-.nk-button {
-  border-bottom: 1px solid #000;
-  padding-bottom: 2px;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  letter-spacing: 1.5px;
-}
-
 .quote {
   display: flex;
   justify-content: center;
@@ -176,13 +168,14 @@ header nav ul li a:hover {
 .quote .quote-by {
   text-align: center;
   font-size: 0.6em;
-  margin-top: 50px;
+  margin-top: 25px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
 .quote .quote-words {
   font-size: 2em;
+  max-width: 515px;
 }
 
 .new-arrivals {
@@ -226,7 +219,11 @@ header nav ul li a:hover {
 .new-arrivals .item-list .item .promo {
   color: #bbb;
   text-transform: uppercase;
-  font-size: 0.85em;
+  font-family: "Avenir Next";
+  font-size: 9px;
+  line-height: 9px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .new-arrivals .wrap {
@@ -264,8 +261,8 @@ header nav ul li a:hover {
   justify-content: center;
   align-items: center;
   background: #fff;
-  width: 240px;
-  height: 60px;
+  width: 208px;
+  height: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.75em;
@@ -307,8 +304,8 @@ header nav ul li a:hover {
   justify-content: center;
   align-items: center;
   background: #000;
-  width: 240px;
-  height: 60px;
+  width: 208px;
+  height: 50px;
 }
 
 .stories .CTA .btn a {
@@ -568,4 +565,67 @@ opacity: 0; visibility:hidden;
 }
 .info-positioning:nth-child(3) {
   left: 205%;
+}
+
+.hero-text {
+  color: #FFFFFF;
+  font-family: "Adobe Garamond Pro";
+  font-size: 35px;
+  line-height: 40px;
+  text-shadow: 0 0 20px 0 rgba(0,0,0,0.5);}
+}
+
+.nk-button {
+  text-decoration: none;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.explore-button  {
+  color: #000000;	font-family: "Avenir Next";	font-size: 10px;	line-height: 15px;	text-align: center; text-transform: uppercase; letter-spacing: 2px;
+}
+
+.carousel-header {
+  color: #000000;	font-family: "Adobe Garamond Pro";	font-size: 30px;	line-height: 35px; margin-bottom: 10px;
+}
+
+.carousel-link {
+  color: #000000;	font-family: "Avenir Next";	font-size: 10px;	line-height: 18px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom-color: #EFEFEF; border-bottom-width: 1px; border-bottom-style: solid;
+}
+
+.quote-words h3 {
+  font-family: "Adobe Garamond Pro";	font-size: 35px;	font-style: italic;	line-height: 40px;	text-align: center;	text-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+
+.quote-by p {
+  font-family: "Avenir Next";	font-size: 10px;	font-weight: 500;	line-height: 15px;	text-align: center;	text-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+
+.header-title {
+  font-family: "Avenir Next";	font-size: 10px;	line-height: 15px;	text-align: center; letter-spacing: 1.5px; text-transform: uppercase;
+}
+
+.product-text {
+  font-family: "Adobe Garamond Pro";	font-size: 16px !important;	line-height: 25px;	text-align: center; margin-bottom: 0px !important;
+}
+
+.brand {
+  text-transform: uppercase;
+}
+
+.book-text {
+  font-family: "Adobe Garamond Pro";	font-size: 35px;	line-height: 40px;	text-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+}
+
+.story-title {
+  font-family: "Adobe Garamond Pro";	font-size: 30px !important;	line-height: 35px;	text-align: center;
+}
+
+.story-sub {
+  text-transform: uppercase; margin-top: 15px; letter-spacing: 1.5px; font-family: "Avenir Next";	font-size: 10px !important;	line-height: 10px;	text-align: center;
+}
+
+.more-stories-text {
+      letter-spacing: 2px;text-transform: uppercase; font-family: "Avenir Next";	font-size: 10px;	line-height: 15px;	text-align: center;
 }
