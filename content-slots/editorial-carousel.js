@@ -4,9 +4,29 @@
     let up = 91;
     var count = 1;
 
+    var firstLaunch = true;
+
     var stage1 = 0;
     var stage2 = 91;
     var stage3 = 182;
+
+    function textAnimation() {
+      $(".info-slide-1").removeClass('active');
+
+
+      // $(".info-positioning.active").fadeTo( 500, 0 );
+
+      setTimeout(function(){
+          $(".info-slide-2").addClass('active');
+        // $(".info-positioning.active").css('opacity', 0);
+        // $(".info-positioning.active").removeClass('active');
+        // setTimeout(function(){
+        //   $(".info-slide-2").addClass('active');
+        //   $(".info-positioning.active").fadeTo( 500, 1);
+        // }, 500);
+      }, 2000);
+    }
+    textAnimation();
 
     $(".sliderControl").click(function(event) {
 
@@ -25,7 +45,7 @@
 
           stage1 = 0 + "%";
           $(".carousel-item-1").css("left", stage1);
-          $(".info-slide-1").css("left", "5%");
+          // $(".info-slide-1").css("left", "5%");
           if (windowWidth < 850) {
             stage2 = 100 + "%";
           } else {
@@ -33,14 +53,14 @@
           }
 
           $(".carousel-item-2").css("left", stage2);
-          $(".info-slide-2").css("left", "105%");
+          // $(".info-slide-2").css("left", "105%");
           if (windowWidth < 850) {
             stage3 = 200 + "%";
           } else {
             stage3 = 182 + "%";
           }
           $(".carousel-item-3").css("left", stage3);
-          $(".info-slide-3").css("left", "205%");
+          // $(".info-slide-3").css("left", "205%");
           return;
         case "2":
           if (windowWidth < 850) {
@@ -49,17 +69,17 @@
             stage1 = -91 + "%";
           }
           $(".carousel-item-1").css("left", stage1);
-          $(".info-slide-1").css("left", "-105%");
+          // $(".info-slide-1").css("left", "-105%");
           stage2 = 0 + "%";
           $(".carousel-item-2").css("left", stage2);
-          $(".info-slide-2").css("left", "5%");
+          // $(".info-slide-2").css("left", "5%");
           if (windowWidth < 850) {
             stage3 = 100 + "%";
           } else {
             stage3 = 91 + "%";
           }
           $(".carousel-item-3").css("left", stage3);
-          $(".info-slide-3").css("left", "105%");
+          // $(".info-slide-3").css("left", "105%");
           return;
         case "3":
           if (windowWidth < 850) {
@@ -68,17 +88,17 @@
             stage1 = -182 + "%";
           }
           $(".carousel-item-1").css("left", stage1);
-          $(".info-slide-1").css("left", "-205%");
+          // $(".info-slide-1").css("left", "-205%");
           if (windowWidth < 850) {
             stage2 = -100 + "%";
           } else {
             stage2 = -91 + "%";
           }
           $(".carousel-item-2").css("left", stage2);
-          $(".info-slide-2").css("left", "-105%");
+          // $(".info-slide-2").css("left", "-105%");
           stage3 = 0 + "%";
           $(".carousel-item-3").css("left", stage3);
-          $(".info-slide-3").css("left", "5%");
+          // $(".info-slide-3").css("left", "5%");
           return;
         default:
           return;
@@ -89,11 +109,21 @@
     });
 
     function heroTimer() {
-      count ++;
 
-      $(".sliderControl:nth-child(" + count + ")").trigger('click');
-      console.log(count);
+      if (firstLaunch != true) {
+        count ++;
+
+        $(".sliderControl:nth-child(" + count + ")").trigger('click');
+        console.log(count);
+      }
+
+      firstLaunch = false;
+
       timer = setTimeout(heroTimer, 5000);
     }
     heroTimer();
+  });
+
+  $(window).scroll(function(event) {
+    console.log("Print");
   });
