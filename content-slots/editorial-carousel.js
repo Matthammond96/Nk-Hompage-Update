@@ -11,20 +11,20 @@
     var stage3 = 182;
 
     function textAnimation() {
-      $(".info-slide-1").removeClass('active');
+      // $(".info-slide-1").removeClass('active');
+      //
+      //
 
-
-      // $(".info-positioning.active").fadeTo( 500, 0 );
-
-      setTimeout(function(){
-          $(".info-slide-2").addClass('active');
-        // $(".info-positioning.active").css('opacity', 0);
-        // $(".info-positioning.active").removeClass('active');
-        // setTimeout(function(){
-        //   $(".info-slide-2").addClass('active');
-        //   $(".info-positioning.active").fadeTo( 500, 1);
-        // }, 500);
-      }, 2000);
+      //
+      // setTimeout(function(){
+      //     $(".info-slide-2").addClass('active');
+      //   // $(".info-positioning.active").css('opacity', 0);
+      //   // $(".info-positioning.active").removeClass('active');
+      //   // setTimeout(function(){
+      //   //   $(".info-slide-2").addClass('active');
+      //   //   $(".info-positioning.active").fadeTo( 500, 1);
+      //   // }, 500);
+      // }, 2000);
     }
     textAnimation();
 
@@ -45,7 +45,7 @@
 
           stage1 = 0 + "%";
           $(".carousel-item-1").css("left", stage1);
-          // $(".info-slide-1").css("left", "5%");
+          $(".info-slide-1").css("left", "5%");
           if (windowWidth < 850) {
             stage2 = 100 + "%";
           } else {
@@ -53,14 +53,14 @@
           }
 
           $(".carousel-item-2").css("left", stage2);
-          // $(".info-slide-2").css("left", "105%");
+          $(".info-slide-2").css("left", "105%");
           if (windowWidth < 850) {
             stage3 = 200 + "%";
           } else {
             stage3 = 182 + "%";
           }
           $(".carousel-item-3").css("left", stage3);
-          // $(".info-slide-3").css("left", "205%");
+          $(".info-slide-3").css("left", "205%");
           return;
         case "2":
           if (windowWidth < 850) {
@@ -125,5 +125,30 @@
   });
 
   $(window).scroll(function(event) {
-    console.log("Print");
+    var windowTop = $(window).scrollTop();
+    var title = $(".main-hero").offset().top;
+    var wrapBot = $(".main-hero").offset().top + $(".main-hero").height();
+    var titleHeight = $(".main-hero .wrap").height();
+
+    console.log("windowTop: " + windowTop);
+    console.log("title: " + title);
+
+    if ( title - 50 < windowTop && (wrapBot - titleHeight) - 120 > windowTop) {
+      $(".main-hero .wrap").css("top", windowTop);
+    }
+
+
+    var revealPos = $('.stories').offset().top;
+    var revealPos2 = $('.story-block-wide').offset().top;
+
+    if ( revealPos - 300 < windowTop ) {
+      $('.story-block-tall').fadeTo('500', 1, function() {
+        $('.story-block-short').fadeTo('500', 1);
+      });
+    }
+
+    if (revealPos2 - 300 < windowTop) {
+      $('.story-block-wide').fadeTo('500', 1);
+    }
+
   });
